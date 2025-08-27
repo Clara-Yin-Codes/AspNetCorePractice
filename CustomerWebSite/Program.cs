@@ -16,6 +16,8 @@ namespace CustomerWebSite
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+            builder.Services.AddDbContext<Models.NorthwindContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Northwind")));
+
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
