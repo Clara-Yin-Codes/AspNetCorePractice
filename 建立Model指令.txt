@@ -1,0 +1,5 @@
+1. 第一個Project 建立Model指令
+
+Scaffold-DbContext "Data Source=(localdb)\ProjectModels;Initial Catalog=Northwind;Integrated Security=true;Encrypt=true;TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -t Customers -f -NoOnConfiguring
+
+"Northwind": "Data Source=(localdb)\\ProjectModels;Initial Catalog=Northwind;Integrated Security=true;Encrypt=true;TrustServerCertificate=true;"
